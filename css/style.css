@@ -1,0 +1,213 @@
+body {
+  color: #858585;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;  
+}
+
+#web {
+  background: #f3f3f3 url('http://wp.ewsproduction.com/elliott/wp-content/themes/memorable/images/home-section-bg.png') bottom center repeat-x; 
+  width: 960px; 
+  height: 960px; 
+  border: 1px solid #000; 
+  position: relative; 
+}
+
+#center-sphere { 
+  width: 600px; 
+  height: 600px; 
+  position: absolute; 
+  left: 180px; 
+  top: 190px; 
+  border: 2px rgb(115,166,183) solid;																																							
+  border-radius: 50%;
+}
+
+/*Collapsed Circle*/
+.sphere { 
+  width: 125px; 
+  height: 125px; 
+  border-radius: 50%;
+  position: absolute; 
+  border: 2px rgb(115,166,183) solid;
+  border-radius: 50%;
+  transition: background-color 800ms ease-in-out;
+  background: rgba(125,184,214, .2);
+   transition:width 800ms, height 800ms, border-radius 800ms,left 800ms, top 800ms ;
+  -moz-transition:width 800ms, height 800ms, border-radius 800ms,left 800ms, top 800ms;
+  -ms-transition:width 800ms, height 800ms, border-radius 800ms,left 800ms, top 800ms;
+  -o-transition:width 800ms, height 800ms, border-radius 800ms,left 800ms, top 800ms;
+  -webkit-transition:width 800ms, height 800ms, border-radius 800ms,left 800ms, top 800ms;
+}
+
+/*Expanded Circle*/
+.sphere:hover {
+  transition: background-color 800ms ease-in-out;
+  background: rgb(115,166,183);
+  color: #ffffff;
+  z-index: 999;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  width: 300px; 
+  height: 300px;
+}
+
+/*Individual Circles*/
+/*Admissions*/
+.five{left: 95px; top: 565px;}
+/*Alumni*/
+.six{left: 60px; top: 415px;}
+/*Career and Co-op Services*/
+.seven{left: 390px; top: 85px;}
+/*ITS*/
+.eight{left: 520px; top: 110px;}
+/*Athletics*/
+.nine{left: 625px; top: 195px;}
+/*Continuing and Professional*/
+.ten{left: 720px; top: 290px;}
+/*Student Success*/
+.eleven{left: 755px; top: 420px;}
+/*Academic Schools*/
+.fourteen{left: 260px; top: 120px;}
+/*Student Life/Counseling/Disability Services*/
+.fifteen{left: 480px; top: 755px;}
+/*Advising*/
+.four{left: 188px; top: 685px;}
+/*Housing*/
+.three{left: 325px; top: 755px;}
+/*Auxiliary Services*/
+.two{left: 620px; top: 687px;}
+/*Financial Aid*/
+.one{left:720px; top: 570px;}
+/*Facilities*/
+.sixteen{left: 95px; top: 263px;}
+
+
+.text {
+   -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  top: 40px;
+  left: 35px;
+}
+
+.admissions {
+	margin-left: -15px;
+	top: 65px;
+}
+
+.advising {
+	top: 65px;
+	left: 40px;
+}
+
+.housing {
+	top: 65px;
+	left: 40px;
+}
+
+.career {
+	left: 20px;
+	top: 55px;
+}
+
+.its {
+	top: 60px;
+	left: 60px;
+}
+
+.athletes {
+	top: 65px;
+	left: 45px;
+}
+
+.continuinged {
+	left: 40px;
+}
+
+.studentsuccess {
+	left: 45px;
+	top: 45px;
+}
+
+.academicschools {
+	top: 55px;
+	left: 40px;
+}
+
+.facilities {
+	top: 65px;
+	left: 35px;
+}
+
+.alumni {
+	top: 50px;
+	left: 45px;
+}
+
+.finaid {
+	top: 55px;
+	left: 45px;
+}
+
+.auxservices {
+	top: 55px;
+	left: 45px;
+}
+
+.studentlife {
+	top: 45px;
+	left: 35px;
+}
+
+.sphere:hover .text {
+  top: 20px;
+  left: 100px;
+}
+
+.sphere:hover .muscles{
+  top: 20px;
+  left: 82px;
+}
+
+.blurb {
+  margin: 2.0em;
+  color: rgba(255,255,255,0);
+  -ms-transform: scale(.9); 
+  -webkit-transform: scale(.9); 
+  transform: scale(.9);
+  visibility: hidden;
+}
+
+.sphere:hover .blurb {
+   -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  color: rgba(255,255,255,1);
+  visibility: visible;
+}
+
+.muscles {
+  top: 70px;
+  left: 20px;
+}
+
+.title {
+   font-size: 35px;
+   position: relative;
+   top: 245px;
+	color: navy;
+   text-align: center;
+}
+.description {
+   font-size: 20px;
+   position: relative;
+   top: 265px;
+   text-align: center;
+}

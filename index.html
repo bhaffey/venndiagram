@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Venn Diagram - Office of Student Assistance</title>
+
+</head>
+
+<body>
+
+ <p>
+	<style type="text/css">
+body {
+  color: #858585;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;  
+}
+
+#web {
+  width: 960px; 
+  height: 960px; 
+
+  position: relative; 
+}
+
+#center-sphere { 
+  width: 600px; 
+  height: 600px; 
+  position: absolute; 
+  left: 180px; 
+  top: 100px; 
+  border: 2px rgb(115,166,183) solid;																																							
+  border-radius: 50%;
+}
+
+/*Collapsed Circle*/
+.sphere { 
+  width: 120px; 
+  height: 120px; 
+  border-radius: 50%;
+  position: absolute; 
+  border: 2px rgb(115,166,183) solid;
+  border-radius: 50%;
+  transition: background-color 800ms ease-in-out;
+  background: rgba(125,184,214, .2);
+   transition:width 800ms, height 800ms, border-radius 800ms,left 800ms, top 800ms ;
+  -moz-transition:width 800ms, height 800ms, border-radius 800ms,left 800ms, top 800ms;
+  -ms-transition:width 800ms, height 800ms, border-radius 800ms,left 800ms, top 800ms;
+  -o-transition:width 800ms, height 800ms, border-radius 800ms,left 800ms, top 800ms;
+  -webkit-transition:width 800ms, height 800ms, border-radius 800ms,left 800ms, top 800ms;
+}
+
+/*Expanded Circle*/
+.sphere:hover {
+  transition: background-color 800ms ease-in-out;
+  background: rgb(115,166,183);
+  color: #ffffff;
+  z-index: 999;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  width: 300px; 
+  height: 300px;
+}
+
+/*Individual Circles*/
+/*Admissions*/
+.five{left: 115px; top: 485px;}
+/*Alumni*/
+.six{left: 80px; top: 360px;}
+/*Career Services*/
+.seven{left: 400px; top: 0px;}
+/*ITS*/
+.eight{left: 535px; top: 22px;}
+/*Athletics*/
+.nine{left: 649px; top: 94px;}
+/*Continuing and Professional*/
+.ten{left: 728px; top: 202px;}
+/*Student Success*/
+.eleven{left: 755px; top: 330px;}
+/*Academic Schools*/
+.fourteen{left: 270px; top: 33px;}
+/*Student Life/Counseling/Disability Services*/
+.fifteen{left: 563px; top: 650px;}
+/*Professional Advising*/
+.four{left: 305px; top: 660px;}
+/*Housing*/
+.three{left: 435px; top: 680px;}
+/*Auxiliary Services*/
+.two{left: 665px; top: 570px;}
+/*Financial Aid*/
+.one{left:740px; top: 460px;}
+/*Facilities*/
+.sixteen{left: 192px; top: 590px;}
+/*Human Resources*/
+.seventeen{left: 100px; top: 228px;}
+/*Finance*/
+.eighteen{left: 165px; top: 115px;}
+
+
+.text {
+   -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  top: 40px;
+  left: 35px;
+}
+
+.admissions {
+	margin-left: -20px;
+	top: 50px;
+}
+
+.advising {
+	top: 50px;
+	left: 20px;
+}
+
+.housing {
+	top: 50px;
+	left: 30px;
+}
+
+.career {
+	left: 30px;
+	top: 35px;
+}
+
+.its {
+	top: 45px;
+	left: 50px;
+}
+
+.athletes {
+	top: 45px;
+	left: 35px;
+}
+
+.continuinged {
+  top: 30px;
+	left: 25px;
+}
+
+.studentsuccess {
+	left: 35px;
+	top: 30px;
+}
+
+.academicschools {
+	top: 40px;
+	left: 25px;
+}
+
+.facilities {
+	top: 55px;
+	left: 10px;
+}
+
+.alumni {
+	top: 40px;
+	left: 35px;
+}
+
+.finaid {
+	top: 40px;
+	left: 35px;
+}
+
+.auxservices {
+	top: 40px;
+	left: 35px;
+}
+
+.studentlife {
+	top: 25px;
+	left: 25px;
+}
+
+.finance2 {
+  top: 45px;
+  left: 25px;
+}
+
+.humanresources {
+  top: 40px;
+  left: 15px;
+}
+
+
+.sphere:hover .text {
+  top: 30px;
+  left: 100px;
+}
+
+.sphere:hover .muscles{
+  top: 20px;
+  left: 82px;
+}
+
+.blurb {
+  margin: 2.0em;
+  color: rgba(255,255,255,0);
+  -ms-transform: scale(.9); 
+  -webkit-transform: scale(.9); 
+  transform: scale(1.0);
+  visibility: hidden;
+}
+
+#its {
+  margin-left: 70px;
+}
+
+#auxillaryservices {
+  margin-left: 50px;
+}
+
+#humanresources {
+  margin-top: 50px;
+}
+
+.sphere:hover .blurb {
+   -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  color: rgba(255,255,255,1);
+  visibility: visible;
+}
+
+.muscles {
+  top: 70px;
+  left: 20px;
+}
+
+.title {
+   font-size: 35px;
+   position: relative;
+   top: 245px;
+	color: navy;
+   text-align: center;
+}
+.description {
+   font-size: 20px;
+   position: relative;
+   top: 265px;
+   text-align: center;
+}	</style>
+</p>
+<div id="web">
+	<div id="center-sphere">
+		<h2 class="title">
+			<span style="font-size:28px;">Office of Student Assistance</span></h2>
+		<p class="description"><span style="font-size:20px;">Hover over a<br />
+			sphere to learn more</span></p>
+	</div>
+	<div class="sphere one">
+		<span class="text finaid">Financial<br />
+		Aid</span>
+		<p class="blurb">&bull;Identifying all forms of aid that are being applied as payment to the bill<br />
+			<br />
+			&bull;Academic progress<br />
+			&nbsp;</p>
+	</div>
+	<div class="sphere two">
+		<span class="text auxservices">Auxiliary<br />
+		Services</span>
+		<p class="blurb" id="auxillaryservices">&bull;ID card<br />
+			<br />
+			&bull;Higher One<br />
+			<br />
+			&bull;Meal Plan<br />
+			<br />
+			&bull;Refund method<br />
+			&nbsp;</p>
+	</div>
+	<div class="sphere three">
+		<span class="text housing">Housing</span>
+		<p class="blurb">&bull;Bill payment<br />
+			<br />
+			&bull;Housing deposit<br />
+			<br />
+			&bull;Preparedness for check-in<br />
+			&nbsp;</p>
+	</div>
+	<div class="sphere four">
+		<span class="text advising">Professional<br />
+		Advising</span>
+		<p class="blurb">&bull;Waivers/Substitutions;<br />
+			&bull;Change of major;<br />
+			&bull;Tutorials;<br />
+			&bull;Degree Works/Degree Audit;<br />
+			&bull;Leave of Absence/Resumption of Study;<br />
+			&bull;Taking courses elsewhere/Study abroad</p>
+	</div>
+	<div class="sphere five">
+		<span class="text admissions">Admissions</span>
+		<p class="blurb">&bull;Starting the student record in Banner<br />
+			<br />
+			&bull;Initial TCEs (Transfer Credit Evaluations)<br />
+			<br />
+			&bull;Prepares the student record for registration<br />
+			&nbsp;</p>
+	</div>
+	<div class="sphere six">
+		<span class="text alumni">Alumni<br />
+		Affairs</span>
+		<p class="blurb">&bull;List of who has graduated/the graduating class<br />
+			<br />
+			&bull;Parent newsletter<br />
+			<br />
+			&bull;Academic record requests<br />
+			&nbsp;</p>
+	</div>
+	<div class="sphere seven">
+		<span class="text career">Career<br />
+		Services</span>
+		<p class="blurb">&bull;Internships for credit<br />
+			<br />
+			&bull;List of seniors that are eligible for internships<br />
+			&nbsp;</p>
+	</div>
+	<div class="sphere eight">
+		<span class="text its">ITS</span>
+		<p class="blurb" id="its">&bull;Account Provisioning<br />
+			<br />
+			&bull;Hosting of Banner, Blackboard, Touchnet, etc.<br />
+			<br />
+			&bull;Core enterprise tools and systems<br />
+			&nbsp;</p>
+	</div>
+	<div class="sphere nine">
+		<span class="text athletes">Athletics</span>
+		<p class="blurb">&bull;Student data for NCAA compliance<br />
+			<br />
+			&bull;Student housing<br />
+			<br />
+			&bull;Bill payment<br />
+			&nbsp;</p>
+	</div>
+	<div class="sphere ten">
+		<span class="text continuinged">Continuing &amp;<br />
+		Professional Education</span>
+		<p class="blurb">&bull;Registration (Banner FlexReg)<br />
+			<br />
+			&bull;Payment<br />
+			<br />
+			&bull;Academic record<br />
+			&nbsp;</p>
+	</div>
+	<div class="sphere eleven">
+		<span class="text studentsuccess">Student<br />
+		Success/<br />
+		CAE</span>
+		<p class="blurb">&bull;???<br />
+			&nbsp;</p>
+	</div>
+	<div class="sphere fourteen">
+		<span class="text academicschools">Academic<br />
+		Schools</span>
+		<p class="blurb">&bull;Degree conferral<br />
+			<br />
+			&bull;Academic record or credits, transcripts, transfer credits, etc.<br />
+			<br />
+			&bull;Submitting grades, missing grades, change of grades<br />
+			&nbsp;</p>
+	</div>
+	<div class="sphere fifteen">
+		<span class="text studentlife">Student Life<br />
+		/Counseling<br />
+		Disability<br />
+		Services</span>
+		<p class="blurb">&bull;Co-Curricular Transcripts<br />
+			<br />
+			&bull;Medical Leave of Absence<br />
+			<br />
+			&bull;Cashiering events<br />
+			&nbsp;</p>
+	</div>
+	<div class="sphere sixteen">
+		<span class="text facilities">Facilities, B&amp;G</span>
+		<p class="blurb">&bull;Academic Scheduling<br />
+			<br />
+			&bull;Classroom utilization<br />
+			<br />
+			&bull;Classroom features and inventory of classrooms/features in R25</p>
+	</div>
+	<div class="sphere seventeen">
+		<span class="text humanresources">Human Resources</span>
+		<p class="blurb" id="humanresources">&bull;Tuition Remission<br />
+			<br />
+			&bull;PMDP<br />
+			<br />
+			&bull;Staffing</p>
+	</div>
+	<div class="sphere eighteen">
+		<span style="font-size:14px;"><span style="font-family: tahoma,geneva,sans-serif;"><span class="text finance2">Finance</span></span></span>
+		<p class="blurb">&bull;Cash flow<br />
+			<br />
+			&bull;Billing/Tuition Revenue cycle<br />
+			<br />
+			&bull;RNP; Void/Reinstate</p>
+	</div>
+</div>
+<script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+
+</body>
+
+</html>
